@@ -2,19 +2,23 @@
 
 // put function declarations here:
 // int myFunction(int, int);
-#define LED_PIN 5 
+#define LedR 5
+#define LedB 4 
 
 void setup() {
   // put your setup code here, to run once:
   //int result = myFunction(2, 3);
-  pinMode(LED_PIN, OUTPUT);
+  pinMode(LedR, OUTPUT);
+  pinMode(LedB, OUTPUT);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  digitalWrite(LED_PIN, HIGH);
+  digitalWrite(LedR, HIGH);
   delay(200);
+  digitalWrite(LedR, LOW);
+  digitalWrite(LedB, HIGH);
+  delay(200);
+  digitalWrite(LedB, LOW);
 
-  digitalWrite(LED_PIN, LOW);
-  delay(200);
 }
